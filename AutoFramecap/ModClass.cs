@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using Modding;
 using UnityEngine;
 
 namespace AutoFramecap
 {
-    public class AutoFramecap : Mod
+    public class AutoFramecap : Mod, ITogglableMod
     {
         internal static AutoFramecap Instance;
 
@@ -29,6 +29,13 @@ namespace AutoFramecap
             Instance = this;
 
             ModHooks.BeforeSceneLoadHook += OnSceneLoad;
+        }
+
+        public void Unload()
+        {
+            ModHooks.BeforeSceneLoadHook -= OnSceneLoad;
+
+            Application.targetFrameRate = GameManager.instance.gameSettings.frameCapOn ? 400 : -1;
         }
 
         private string OnSceneLoad(string name) 
