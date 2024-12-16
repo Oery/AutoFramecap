@@ -11,6 +11,7 @@ namespace AutoFramecap
 
         public AutoFramecap() : base("Auto Framecap") {}
 
+        public override string GetVersion() => "0.3";
 
         private ModSettings modSettings = new();
         public void OnLoadGlobal(ModSettings data) => modSettings = data;
