@@ -33,6 +33,8 @@ namespace AutoFramecap
             Instance = this;
 
             ModHooks.BeforeSceneLoadHook += OnSceneLoad;
+
+            CheckScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
         }
 
         public void Unload()
