@@ -11,7 +11,7 @@ namespace AutoFramecap
 
         public AutoFramecap() : base("Auto Framecap") {}
 
-        public override string GetVersion() => "0.1";
+        public override string GetVersion() => "0.2";
 
         private readonly string[] cappedScenes =
         [
