@@ -20,7 +20,8 @@ namespace AutoFramecap
             "GG_Unn", 
             "GG_Engine_Root", 
             "GG_Wyrm", 
-            "GG_Sly"
+            "GG_Sly",
+            "GG_Hollow_Knight",
         ];
 
         public override void Initialize(Dictionary<string, Dictionary<string, GameObject>> preloadedObjects)
